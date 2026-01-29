@@ -6,6 +6,17 @@ A full-stack web application that automatically extracts action items, decisions
 
 This application addresses a common business problem: after meetings, notes are unstructured and action items get lost. The AI Meeting Notes Analyzer processes raw meeting notes and automatically organizes them into actionable components, improving team accountability and follow-through.
 
+## Screenshots
+Meeting Notes Input
+-> Frontend interface where users enter a meeting title and paste unstructured meeting notes for analysis.
+
+AI Analysis Results
+-> AI-generated summary showing extracted action items, decisions, and key discussion points.
+
+UI View
+-> Additional view demonstrating the application workflow and UI state.
+
+
 ## Core Features
 
 - AI-powered extraction of action items with assigned personnel and deadlines
