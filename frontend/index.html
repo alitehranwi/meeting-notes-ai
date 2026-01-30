@@ -392,7 +392,11 @@
         // CONFIGURATION
         // ==========================================
         // API endpoint - change this when deploying to production
-        const API_URL = 'http://localhost:8000/api/meetings';
+        const API_URL = 
+            window.location.hostname === 'localhost' 
+            ? "http://localhost:8000/api/meetings"
+            : "https://meeting-notes-ai-iz5w.onrender.com/api/meetings";
+
 
         // ==========================================
         // DOM ELEMENT REFERENCES
