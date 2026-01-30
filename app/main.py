@@ -12,7 +12,7 @@ ENVIRONMENT= os.getenv("ENVIRONMENT", "development")
 if ENVIRONMENT == "production":
     # Production: Only allow frontend domain
     allowed_origins = [
-        "https://*.netlify.app"
+        "https://meeting-notes-ai-analyser.netlify.app"
     ]
 else:
     # Development: Allow localhost for testing
