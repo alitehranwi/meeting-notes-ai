@@ -392,10 +392,14 @@
         // CONFIGURATION
         // ==========================================
         // API endpoint - change this when deploying to production
-        const API_URL = 
+        const API_BASE =
             window.location.hostname === 'localhost' 
-            ? "http://localhost:8000/api/meetings"
-            : "https://meeting-notes-ai-iz5w.onrender.com/api/meetings";
+            ? "http://localhost:8000"
+            : "https://meeting-notes-ai-iz5w.onrender.com";
+
+        const API = (path) => `${API_BASE}${path}`;
+
+        
 
 
         // ==========================================
@@ -429,7 +433,7 @@
 
             try {
                 // Send POST request to backend API
-                const response = await fetch(API_URL, {
+                const response = await fetch(API("/api/meetings"), {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -449,7 +453,8 @@
                 const data = await response.json();
 
                 // Fetch the full meeting details using the meeting ID
-                const detailsResponse = await fetch(`http://localhost:8000/api/meetings/${data.meeting_id}`);
+                const detailsResponse = await fetch(API(`/api/meetings/${data.meeting_id}`));
+
 
                 if (!detailsResponse.ok) {
                     throw new Error('Failed to fetch meeting details');
