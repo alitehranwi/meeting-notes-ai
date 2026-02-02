@@ -1,4 +1,5 @@
 # AI Meeting Notes Analyzer
+https://meeting-notes-ai-analyser.netlify.app/
 
 A full-stack web application that automatically extracts action items, decisions, and key discussion points from meeting notes using artificial intelligence.
 
